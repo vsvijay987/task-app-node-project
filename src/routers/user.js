@@ -1,9 +1,18 @@
 const express = require("express");
 
+//for file uploads
+const multer = require('multer');
+
 const User = require("../models/user");
 const auth = require("../middleware/auth");
 
+const upload = multer({dest: 'avatars'});
+
 const router = new express.Router();
+
+router.post("/users/me/avatar", upload.single('avatar') , (req, res) => {
+  res.send();
+})
 
 router.post("/users", async (req, res) => {
   const user = new User(req.body);
