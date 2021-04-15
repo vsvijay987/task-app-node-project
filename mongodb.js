@@ -8,20 +8,20 @@
 
 // const ObjectID = mongodb.ObjectID;
 
-const {MongoClient, ObjectID} = require("mongodb")
+// const {MongoClient, ObjectID} = require("mongodb")
 
-const connectionUrl = "mongodb://127.0.0.1:27017";
+// const connectionUrl = "mongodb://127.0.0.1:27017";
 
-const databaseName = "task-manager";
+// const databaseName = "task-manager";
 
-MongoClient.connect(
-  connectionUrl,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+// MongoClient.connect(
+//   connectionUrl,
+//   { useNewUrlParser: true, useUnifiedTopology: true },
   
-  (error, client) => {
-    if (error) return console.log("Something went Wrong!");
+//   (error, client) => {
+//     if (error) return console.log("Something went Wrong!");
 
-    const db = client.db(databaseName);
+//     const db = client.db(databaseName);
 
     // db.collection("users").insertOne(
     //   {
@@ -85,12 +85,12 @@ MongoClient.connect(
     //     console.log(result)
     // }).catch(err => console.log(err))
 
-    db.collection('users').deleteMany({
-        name: 'Vijay'
-    }).then(result => console.log(result))
-    .catch(err => console.log(err))
+//     db.collection('users').deleteMany({
+//         name: 'Vijay'
+//     }).then(result => console.log(result))
+//     .catch(err => console.log(err))
 
 
-  }
+//   }
 
-);
+// );
